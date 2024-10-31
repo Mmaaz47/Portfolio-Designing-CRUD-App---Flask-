@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ user.first_name }} {{ user.last_name }} - My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .header-container {
+            background-color: #0056b3;
+            color: white;
+            padding: 4rem 1.5rem;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+        }
+
+        .header-container img {
+            border-radius: 50%;
+            margin-top: 1rem;
+            border: 4px solid #ffffff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .portfolio-details {
+            margin-top: 2rem;
+        }
+
+        .portfolio-details h3 {
+            font-weight: 500;
+            color: #444;
+        }
+
+        .info-card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .info-card-body p {
+            color: #666;
+        }
+
+        .social-media-links a {
+            margin-right: 15px;
+            color: #0056b3;
+        }
+
+        .social-media-links a:hover {
+            color: #003d7a;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container mt-5">
+        <!-- Portfolio Header -->
+        <div class="header-container">
+            <h1>{{ user.first_name }} {{ user.last_name }}</h1>
+            <img src="{{ url_for('static', filename='images/' + user.profile_picture) }}" alt="Profile Picture" class="img-thumbnail" width="160">
+            <p class="mt-3">{{ user.bio }}</p>
+        </div>
+
+        <!-- Contact Info & Skills -->
+        <div class="row portfolio-details">
+            <div class="col-md-6">
+                <div class="info-card">
+                    <div class="info-card-body">
+                        <h3>Contact Details</h3>
+                        <p><strong>Email:</strong> {{ user.email }}</p>
+                        <p><strong>Phone:</strong> {{ user.phone }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="info-card">
+                    <div class="info-card-body">
+                        <h3>Core Skills</h3>
+                        <p>{{ user.skills }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="portfolio-details">
+            <div class="info-card">
+                <div class="info-card-body">
+                    <h3>My Online Profiles</h3>
+                    <div class="social-media-links">
+                        {% if user.linkedin %}
+                        <a href="{{ user.linkedin }}" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        {% endif %}
+                        {% if user.github %}
+                        <a href="{{ user.github }}" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Font Awesome for icons -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="hero-section text-center py-5" style="background-color: #f8f9fa; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+    <h1 class="display-4 font-weight-bold" style="color: #0056b3;">Welcome to My Portfolio Builder</h1>
+    <p class="lead" style="color: #6c757d;">Create and Showcase Your Professional Portfolio with Ease</p>
+    <a class="btn btn-primary btn-lg mt-3" href="{{ url_for('create_portfolio') }}" role="button">Get Started</a>
+</div>
+{% endblock %}

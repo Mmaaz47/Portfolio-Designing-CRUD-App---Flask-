@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    background-color: #f8f9fa; /* Light gray background for the entire app */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding-top: 60px; /* Space for navbar */
+}
+
+.container {
+    max-width: 960px; /* Restricting the content to a readable width */
+    margin: auto;
+    padding: 20px;
+}
+
+/* Navbar Customization */
+.navbar {
+    background-color: #007bff; /* Bootstrap primary color for the navbar */
+}
+
+.navbar .navbar-brand, .navbar-nav .nav-link {
+    color: white !important; /* White text on navbar */
+    font-weight: bold;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-radius: 5px;
+}
+
+/* Jumbotron Styles (Home Page) */
+.jumbotron {
+    background: url('../images/portfolio-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 100px 50px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.jumbotron h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.jumbotron .lead {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.jumbotron .btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #28a745;
+    border-color: #28a745;
+    border-radius: 50px;
+}
+
+.jumbotron .btn:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Form Styles */
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form .form-control {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+}
+
+form .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Success Page Styles */
+.success-message {
+    text-align: center;
+    padding: 50px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.success-message h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.success-message a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+/* Custom File Input Style */
+.custom-file-input {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #007bff;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.card {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}

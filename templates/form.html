@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Create Your Portfolio</h2>
+<form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    <div class="mb-3">
+        {{ form.first_name.label(class="form-label") }}
+        {{ form.first_name(class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ form.last_name.label(class="form-label") }}
+        {{ form.last_name(class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ form.email.label(class="form-label") }}
+        {{ form.email(class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ form.phone.label(class="form-label") }}
+        {{ form.phone(class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ form.bio.label(class="form-label") }}
+        {{ form.bio(class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ form.skills.label(class="form-label") }}
+        {{ form.skills(class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ form.linkedin.label(class="form-label") }}
+        {{ form.linkedin(class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ form.github.label(class="form-label") }}
+        {{ form.github(class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ form.profile_picture.label(class="form-label") }}
+        {{ form.profile_picture(class="form-control") }}
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
